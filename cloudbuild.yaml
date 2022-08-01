@@ -6,7 +6,7 @@ steps:
 #Gradle build  
 - name: 'gradle:7.5.0-jdk11'
   entrypoint: 'gradle'
-  args: ['clean build']
+  args: ['assemble']
    
 #Docker Image   
 - name: 'gcr.io/cloud-builders/docker'
