@@ -4,7 +4,7 @@ steps:
   args: ['clone','https://source.developers.google.com/p/credible-bay-346209/r/github_prasadrpm_dockerdemo']
   
 #Gradle build  
-- name: 'gradle:jdk11'
+- name: 'gcr.io/cloud-builders/gradle'
   entrypoint: 'gradle'
   args: ['clean build']
    
