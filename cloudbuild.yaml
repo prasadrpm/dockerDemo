@@ -15,3 +15,10 @@ steps:
 #Push the image  
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push','gcr.io/credible-bay-346209/dockerdemo:0.0.1']
+#Compute list
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: 
+    -'compute'
+    -'instances'
+    -'list'
+
