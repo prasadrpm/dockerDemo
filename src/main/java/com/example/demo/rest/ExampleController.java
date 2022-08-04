@@ -11,6 +11,6 @@ public class ExampleController {
 
 	@GetMapping("info")
 	public ResponseEntity<String> getInfo() {
-		return ResponseEntity.ok("Hello GCP!");
+		return ResponseEntity.ok("Hello GCP ! New version"  );
 	}
 }

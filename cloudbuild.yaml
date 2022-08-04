@@ -10,12 +10,12 @@ steps:
    
 #Docker Image   
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build','-t','gcr.io/credible-bay-346209/dockerdemo:0.0.1','.']
+  args: ['build','-t','gcr.io/credible-bay-346209/dockerdemo','.']
 
 #Push the image  
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push','gcr.io/credible-bay-346209/dockerdemo:0.0.1']
-#Compute list
+  args: ['push','gcr.io/credible-bay-346209/dockerdemo']
+  
+#Compute instance deployment
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['compute','instances','list']
-
+  args: ['compute','instances','update-container', 'demoapp', '--container-image', 'gcr.io/credible-bay-346209/dockerdemo:latest']
